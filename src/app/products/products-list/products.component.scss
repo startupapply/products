@@ -1,0 +1,47 @@
+img {
+  width: 50px;
+  height: 50px;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  overflow: hidden;
+  width: 50px;
+  text-overflow: fade;
+  white-space: pre-wrap;
+}
+
+h1 {
+  margin: 20px;
+  text-align: center;
+}
+
+section {
+  display: flex;
+}
+
+.add-btn-label {
+  font-size: 14px;
+  padding: 10px;
+  min-width: 120px;
+  background-color: deepskyblue;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 110px;
+  margin: 20px;
+  position: fixed;
+  top: 75%;
+  opacity: 0.5;
+}
+
+:hover.add-btn-label {
+  background-color: dodgerblue;
+}
+.mat-row {
+  cursor: pointer;
+}
+
