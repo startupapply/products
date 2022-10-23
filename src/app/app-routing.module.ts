@@ -1,18 +1,19 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {ProductsComponent} from "./products/products-list/products.component";
-import {AddProductComponent} from "./products/add-product/add-product.component";
-import {DetailComponent} from "./products/detail/detail.component";
-
-const routes: Routes = [
-  {path: '', redirectTo: '/product', pathMatch: 'full'},
-  {path: 'product', component: ProductsComponent},
-  {path: 'add-product', component: AddProductComponent},
-  {path: 'detail/:id', component: DetailComponent}
-];
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { ProductsComponent } from './components/products/products.component';
+import { DetailComponent } from './components/detail/detail.component';
+import { AddComponent } from './components/add/add.component';
+import { ProductsComponentModule } from './components/products/products.component-module';
+import { ProductServiceModule } from './services/product.service-module';
+import { DetailComponentModule } from './components/detail/detail.component-module';
+import { AddComponentModule } from './components/add/add.component-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot([
+    { path: '', component: ProductsComponent },
+    { path: 'detail/:id', component: DetailComponent },
+    { path: 'add', component: AddComponent }
+  ]), ProductsComponentModule, ProductServiceModule, DetailComponentModule, AddComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

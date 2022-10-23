@@ -1,27 +1,25 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {HttpClientModule} from "@angular/common/http";
-import {ProductsComponent} from './products/products-list/products.component';
-import {MatTableModule} from "@angular/material/table";
-import {AddProductComponent} from './products/add-product/add-product.component';
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatDividerModule} from "@angular/material/divider";
-import {MatButtonModule} from "@angular/material/button";
-import {MatInputModule} from "@angular/material/input";
-import {ReactiveFormsModule} from "@angular/forms";
-import {DetailComponent} from './products/detail/detail.component';
-import {MatCardModule} from "@angular/material/card";
+import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MenuComponent} from "./components/menu/menu.component";
+import {ProductsComponentModule} from "./components/products/products.component-module";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsComponent,
-    AddProductComponent,
-    DetailComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +32,10 @@ import {MatCardModule} from "@angular/material/card";
     MatButtonModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
+    ProductsComponentModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
